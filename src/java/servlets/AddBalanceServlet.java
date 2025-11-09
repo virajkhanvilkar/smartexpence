@@ -7,6 +7,8 @@ import java.sql.*;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import model.DBConnection;
+import java.time.format.DateTimeFormatter;
+
 
 public class AddBalanceServlet extends HttpServlet {
 
@@ -63,7 +65,14 @@ public class AddBalanceServlet extends HttpServlet {
                 psUpdate.setDate(6, java.sql.Date.valueOf(to));
                 psUpdate.executeUpdate();
 
-                session.setAttribute("message", "✅ Balance updated for period " + fromStr + " to " + toStr + ".");
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d MMM yyyy");
+String formattedFrom = from.format(formatter);
+String formattedTo = to.format(formatter);
+
+session.setAttribute("message",
+    "✅ Balance set from " + formattedFrom + " to " + formattedTo + ".");
+
+//                session.setAttribute("message", "✅ Balance updated for period " + fromStr + " to " + toStr + ".");
             } else {
                 // ✅ Insert new record
                 PreparedStatement psInsert = conn.prepareStatement(
@@ -76,7 +85,14 @@ public class AddBalanceServlet extends HttpServlet {
                 psInsert.setDate(6, java.sql.Date.valueOf(to));
                 psInsert.executeUpdate();
 
-                session.setAttribute("message", "✅ Balance set from " + fromStr + " to " + toStr + ".");
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d MMM yyyy");
+String formattedFrom = from.format(formatter);
+String formattedTo = to.format(formatter);
+
+session.setAttribute("message",
+    "✅ Balance set from " + formattedFrom + " to " + formattedTo + ".");
+
+//                session.setAttribute("message", "✅ Balance set from " + fromStr + " to " + toStr + ".");
             }
 
             response.sendRedirect("home.jsp");

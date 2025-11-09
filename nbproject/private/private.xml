@@ -5,8 +5,17 @@
         <group>
             <file>file:/F:/smartexpence_new/web/view_exp.jsp</file>
             <file>file:/F:/smartexpence_new/web/report.jsp</file>
+            <file>file:/F:/smartexpence_new/src/java/servlets/AddBalanceServlet.java</file>
+            <file>file:/F:/smartexpence_new/src/java/servlets/HomeServlet.java</file>
+            <file>file:/F:/smartexpence_new/src/java/servlets/ViewExpensesServlet.java</file>
+            <file>file:/F:/smartexpence_new/web/home.jsp</file>
+            <file>file:/F:/smartexpence_new/src/java/servlets/ReportServlet.java</file>
+            <file>file:/F:/smartexpence_new/src/java/servlets/LoginServlet.java</file>
             <file>file:/F:/smartexpence_new/web/edit_expense.jsp</file>
+            <file>file:/F:/smartexpence_new/web/WEB-INF/web.xml</file>
+            <file>file:/F:/smartexpence_new/web/index.jsp</file>
             <file>file:/F:/smartexpence_new/web/predict.jsp</file>
+            <file>file:/F:/smartexpence_new/src/java/servlets/PredictionServlet.java</file>
         </group>
     </open-files>
 </project-private>
